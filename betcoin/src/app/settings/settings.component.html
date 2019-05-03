@@ -1,0 +1,61 @@
+<div class="card">
+  <div class="card-header">
+    Settings
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="blockNumber">Latest Block Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="blockNumber"
+          aria-describedby="BlockNumber"
+          placeholder="BlockNumber"
+          name="blockNumber"
+          [(ngModel)]="blockNumber"
+        />
+      </div>
+      <div class="form-group">
+        <label for="blockNumber">Current Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="provider"
+          aria-describedby="provider"
+          placeholder="provider"
+          name="provide"
+          [(ngModel)]="currAddr"
+        />
+      </div>
+      <div class="form-group">
+        <label for="blockNumber">Balance Ether</label>
+        <input
+          type="text"
+          class="form-control"
+          id="provider"
+          aria-describedby="provider"
+          placeholder="provider"
+          name="balEther"
+          [(ngModel)]="balEther"
+        />
+      </div>
+      <div class="form-group">
+        <label for="blockNumber">Transaction Count</label>
+        <input
+          type="text"
+          class="form-control"
+          id="provider"
+          aria-describedby="provider"
+          placeholder="provider"
+          name="txnCnt"
+          [(ngModel)]="txnCnt"
+        />
+      </div>
+
+      <button type="submit" (click)="process($event)" class="btn btn-primary">
+        Process
+      </button>
+    </form>
+  </div>
+</div>

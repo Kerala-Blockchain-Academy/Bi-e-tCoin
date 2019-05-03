@@ -1,0 +1,70 @@
+<div class="card">
+  <div class="card-header">
+    Applicants / Users
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="userToken">User Accounts</label>
+        <select
+          class="custom-select"
+          (click)="onChange($event)"
+          name="userAccount"
+          [(ngModel)]="userAccount"
+        >
+          <option *ngFor="let group of arrayGroup" value="{{ group }}">
+            {{ group }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="userToken">User Holding</label>
+        <input
+          type="text"
+          class="form-control"
+          id="userToken"
+          placeholder="User Token Holding"
+          name="tokenHolding"
+          [(ngModel)]="tokenHolding"
+        />
+      </div>
+      <div class="form-group">
+        <label for="userHolding">Profit/Loss</label>
+        <input
+          type="text"
+          class="form-control"
+          id="userHolding"
+          placeholder="User Profit/Loss"
+          name="userProfitLoss"
+          [(ngModel)]="userProfitLoss"
+        />
+      </div>
+      <div class="form-group">
+        <label for="eventMsgs">Transaction info</label>
+        <input
+          type="text"
+          class="form-control"
+          id="eventMsg"
+          placeholder="Event Messages"
+          disabled = true
+          name="eventMessages"
+          [(ngModel)]="eventMsg"
+        />
+      </div>
+      <div>
+      <button type="submit" (click)="lookup($event)" class="btn btn-primary">
+        Lookup
+      </button>
+      <button
+        type="submit"
+        (click)="newICO($event)"
+        [disabled]="buttonDisabled"
+        class="btn btn-primary"
+      >
+        Enroll
+      </button>
+    </div>
+     
+    </form>
+  </div>
+</div>

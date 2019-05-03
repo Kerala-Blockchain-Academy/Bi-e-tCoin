@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    Transaction
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="blockNumber">Block Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="blockNumber"
+          aria-describedby="BlockNumber"
+          placeholder="BlockNumber"
+          name="blockNumber"
+          [(ngModel)]="blockNumber"
+        />
+      </div>
+
+      <button
+        type="submit"
+        (click)="getBlockDetail($event)"
+        class="btn btn-primary"
+      >
+        Get Block Detail
+      </button>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">BlockDetails</span>
+        </div>
+        <textarea
+          name="blockDetails"
+          [(ngModel)]="blockDetails"
+          class="form-control"
+          aria-label="With textarea"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+</div>
